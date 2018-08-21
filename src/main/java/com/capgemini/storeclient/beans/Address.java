@@ -27,20 +27,6 @@ public class Address {
 		super();
 	}
 
-	public Address(Customer customer, String country, String state, String city, int zipcode, String addressLine1,
-			String addressLine2) {
-		super();
-		this.customer = customer;
-		this.country = country;
-		this.state = state;
-		this.city = city;
-		this.zipcode = zipcode;
-		this.addressLine1 = addressLine1;
-		this.addressLine2 = addressLine2;
-	}
-
-
-
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -121,6 +107,12 @@ public class Address {
 		if (addressId != other.addressId)
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [addressId=" + addressId + ", country=" + country + ", state=" + state + ", city=" + city
+				+ ", zipcode=" + zipcode + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + "]";
 	}
 
 	
